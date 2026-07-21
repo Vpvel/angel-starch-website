@@ -170,8 +170,8 @@ export default function Footer() {
 
       <div className="footer__bar">
         <div className="footer__bar-inner container">
-          <p>
-            © {new Date().getFullYear()} {company.name}. All rights reserved.
+          <p className="footer__copy">
+            Angel Starch © {new Date().getFullYear()}. All Rights Reserved.
           </p>
 
           <ul className="footer__social" aria-label="Social media">
@@ -188,8 +188,6 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-
-          <p>Erode, Tamil Nadu, India</p>
         </div>
       </div>
     </footer>
