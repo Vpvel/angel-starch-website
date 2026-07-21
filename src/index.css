@@ -1,0 +1,171 @@
+:root {
+  --magenta: #a82468;
+  --magenta-deep: #8a1a52;
+  --magenta-soft: #c2186a;
+  --accent-line: #e8b923;
+  --ink: #1f1f1f;
+  --muted: #3f3f3f;
+  --panel: #4a4a4a;
+  --panel-soft: rgba(50, 50, 50, 0.72);
+  --white: #ffffff;
+  --bg: #ffffff;
+  --line: #e8e8e8;
+
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.7;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: min(1180px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.section {
+  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-bottom: 0.65rem;
+}
+
+.section-heading {
+  font-size: clamp(1.45rem, 2.8vw, 1.9rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--accent-line);
+  margin-top: 0.75rem;
+}
+
+.body-text {
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 500;
+  max-width: 58ch;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+p {
+  color: var(--muted);
+  font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.eyebrow,
+.about-page__eyebrow,
+.about-page__md-sign,
+.footer__label,
+.blogs__meta,
+.header__nav a,
+.footer__nav a {
+  text-align: left;
+  hyphens: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+.tagline__highlight,
+.about-page__collaborate > h2,
+.about-page__foodix-card p,
+.buyers__heading,
+.banner__title,
+.banner__text,
+.page-hero p {
+  text-align: inherit;
+  hyphens: none;
+}
+
+.tagline,
+.about-page__collaborate,
+.about-page__foodix-card,
+.buyers,
+.page-hero,
+.certs__item {
+  text-align: center;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}

@@ -1,0 +1,151 @@
+.banner {
+  position: relative;
+  height: clamp(380px, 50vw, 560px);
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.banner__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s var(--ease);
+}
+
+.banner__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.banner__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner__slide.is-active .banner__image {
+  animation: kenburns 9s ease-out forwards;
+}
+
+.banner__shade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 20, 20, 0.78) 0%,
+      rgba(20, 20, 20, 0.55) 38%,
+      rgba(20, 20, 20, 0.2) 68%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(20, 20, 20, 0.45) 0%,
+      transparent 40%
+    );
+  pointer-events: none;
+}
+
+.banner__content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.banner__copy {
+  max-width: none;
+  color: var(--white);
+}
+
+.banner__title {
+  margin: 0;
+  font-size: clamp(1.85rem, 3.8vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+}
+
+.banner__line {
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin: 1rem 0 0.95rem;
+  background: #e8b923;
+}
+
+.banner__text {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: none;
+  white-space: nowrap;
+}
+
+.banner__progress {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.45rem;
+}
+
+.banner__dot {
+  position: relative;
+  width: 28px;
+  height: 3px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.banner__dot.is-active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.banner__dot-fill {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: #e8b923;
+}
+
+@media (max-width: 720px) {
+  .banner {
+    height: 420px;
+  }
+
+  .banner__shade {
+    background:
+      linear-gradient(
+        to top,
+        rgba(20, 20, 20, 0.82) 0%,
+        rgba(20, 20, 20, 0.45) 45%,
+        rgba(20, 20, 20, 0.25) 100%
+      );
+  }
+
+  .banner__content {
+    align-items: flex-end;
+    padding-bottom: 3.5rem;
+  }
+
+  .banner__title,
+  .banner__text {
+    white-space: normal;
+  }
+
+  .banner__progress {
+    bottom: 0.9rem;
+  }
+}

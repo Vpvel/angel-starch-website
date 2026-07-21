@@ -1,0 +1,537 @@
+.application-page__hero {
+  background:
+    linear-gradient(180deg, rgba(20, 16, 18, 0.88), rgba(20, 16, 18, 0.92)),
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05), transparent 35%),
+    #1a1518;
+  color: #fff;
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  text-align: center;
+}
+
+.application-page__crumb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.application-page__crumb a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.application-page__hero h1 {
+  margin: 0 auto;
+  max-width: 18ch;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.application-page__intro {
+  background: #fff;
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.application-page__intro h2 {
+  margin: 0 0 1.1rem;
+  max-width: 28ch;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+}
+
+.application-page__intro > .container > p {
+  max-width: 70ch;
+  margin: 0 0 0.95rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.application-page__features {
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.application-page__features li {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.15rem 0.95rem 1.2rem;
+  background: #f3f4f6;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.application-page__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  color: var(--magenta);
+}
+
+.application-page__icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.application-page__features h3 {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  line-height: 1.35;
+}
+
+.application-page__features p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: center;
+}
+
+.application-page__product-features {
+  background: #fff;
+  padding: 0 0 2.5rem;
+}
+
+.application-page__product-features h2 {
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.25rem, 2.3vw, 1.65rem);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+}
+
+.application-page__product-features ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.95rem;
+  max-width: 78ch;
+}
+
+.application-page__product-features li {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.application-page__product-features strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.application-page__growth {
+  background: linear-gradient(135deg, #7a1f6a 0%, #b01d7e 55%, #c43a95 100%);
+  color: #fff;
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.application-page__growth-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.application-page__growth-copy h2 {
+  margin: 0 0 1.15rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  font-weight: 700;
+  text-align: left;
+  color: #fff;
+}
+
+.application-page__growth-copy ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.application-page__growth-copy li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.application-page__growth-copy li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.application-page__growth-media {
+  margin: 0;
+  position: relative;
+}
+
+.application-page__growth-media::after {
+  content: '';
+  position: absolute;
+  top: 8%;
+  bottom: 8%;
+  right: -0.75rem;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.application-page__growth-media img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.application-page__innovations {
+  background: #fff;
+  padding: clamp(2.5rem, 6vw, 4rem) 0 1rem;
+}
+
+.application-page__innovations h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+}
+
+.application-page__products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.application-page__product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 150px;
+  padding: 1.1rem 1rem 1rem;
+  border-radius: 4px;
+}
+
+.application-page__product.is-magenta {
+  background: var(--magenta);
+  color: #fff;
+}
+
+.application-page__product.is-light {
+  background: #eceff3;
+  color: var(--ink);
+}
+
+.application-page__product p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.application-page__product a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 4px;
+  background: #c46aaa;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.application-page__product.is-light a {
+  background: #b84f96;
+}
+
+.application-page__product a:hover {
+  opacity: 0.9;
+  color: #fff;
+}
+
+.application-page__why {
+  background: #fff;
+  padding: 2rem 0 2.5rem;
+}
+
+.application-page__why h2 {
+  margin: 0 0 1.15rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+}
+
+.application-page__why ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.95rem;
+  max-width: 78ch;
+}
+
+.application-page__why li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.application-page__why ul:not(.is-numbered) li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--magenta);
+}
+
+.application-page__why ul.is-numbered li {
+  display: flex;
+  gap: 0.45rem;
+  padding-left: 0;
+}
+
+.application-page__why-num {
+  flex-shrink: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.application-page__gallery {
+  background: #fff;
+  padding: 0 0 2.5rem;
+}
+
+.application-page__gallery-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.application-page__gallery-grid li {
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f3f4f6;
+  aspect-ratio: 4 / 3;
+}
+
+.application-page__gallery-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.application-page__why strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.application-page__video {
+  background: #fff;
+  padding: 0 0 3rem;
+}
+
+.application-page__video-frame {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+}
+
+.application-page__video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.application-page__profits {
+  background: linear-gradient(135deg, #7a1f6a 0%, #b01d7e 55%, #c43a95 100%);
+  color: #fff;
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.application-page__profits-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.application-page__profits-copy h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+}
+
+.application-page__profits-copy p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.application-page__profits-media {
+  margin: 0;
+}
+
+.application-page__profits-media img {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.application-page__faqs {
+  background: #fff;
+  padding: clamp(2.5rem, 6vw, 3.5rem) 0 4rem;
+}
+
+.application-page__faqs h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+}
+
+.application-page__faqs h2 span {
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin-top: 0.55rem;
+  background: var(--accent-line);
+}
+
+.application-page__faqs ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid #e5e7eb;
+  display: grid;
+  gap: 0.35rem;
+  max-width: 78ch;
+}
+
+.application-page__faqs li button {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.85rem 0;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.application-page__faq-bullet {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 0.35rem;
+  background: #9ca3af;
+}
+
+.application-page__faqs li p {
+  margin: 0 0 0.75rem 1.4rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 1000px) {
+  .application-page__features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .application-page__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .application-page__features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .application-page__growth-row,
+  .application-page__profits-row {
+    grid-template-columns: 1fr;
+  }
+
+  .application-page__growth-media::after {
+    display: none;
+  }
+
+  .application-page__gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .application-page__features,
+  .application-page__products {
+    grid-template-columns: 1fr;
+  }
+}

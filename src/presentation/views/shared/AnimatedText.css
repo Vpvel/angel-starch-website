@@ -1,0 +1,8 @@
+.animated-text {
+  display: inline;
+}
+
+.animated-text__unit {
+  display: inline-block;
+  white-space: pre;
+}

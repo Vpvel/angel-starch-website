@@ -1,0 +1,17 @@
+.page-hero {
+  background: linear-gradient(120deg, var(--magenta-deep), var(--magenta));
+  color: var(--white);
+  padding: clamp(2.5rem, 6vw, 3.75rem) 0;
+}
+
+.page-hero h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 52ch;
+}

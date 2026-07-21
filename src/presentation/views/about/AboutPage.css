@@ -1,0 +1,323 @@
+.about-page {
+  background: var(--white);
+  padding-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.about-page__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-page__eyebrow::after {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 3px;
+  background: var(--accent-line);
+  margin-top: 0.55rem;
+}
+
+.about-page__heading {
+  margin: 0 0 1rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.about-page__heading::after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--accent-line);
+  margin-top: 0.8rem;
+}
+
+.about-page__welcome {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.75rem, 4vw, 3.25rem);
+  align-items: center;
+  padding: clamp(2.75rem, 6vw, 4.25rem) 0;
+}
+
+.about-page__welcome-copy p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-page__lead {
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+}
+
+.about-page__welcome-media {
+  margin: 0;
+}
+
+.about-page__welcome-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.about-page__video {
+  padding: clamp(1.5rem, 4vw, 2.5rem) 0 1rem;
+}
+
+.about-page__video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-page__video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.about-page__collaborate {
+  padding: clamp(1.75rem, 4vw, 2.75rem) 0;
+  text-align: center;
+}
+
+.about-page__collaborate > h2 {
+  margin: 0 auto;
+  max-width: none;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink);
+  white-space: normal;
+}
+
+.about-page__md {
+  background: linear-gradient(135deg, #fff5f9 0%, #ffe4ef 45%, #ffd6e8 100%);
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  margin: 0;
+}
+
+.about-page__md-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  background: linear-gradient(145deg, #ffffff 0%, #fff0f6 50%, #ffe0ec 100%);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 16px;
+}
+
+.about-page__md-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-page__md-copy > p:not(.about-page__md-sign) {
+  margin: 0;
+  color: #5a4550;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.about-page__md-sign {
+  margin-top: 1.15rem !important;
+  display: grid;
+  gap: 0.2rem;
+  text-align: left;
+}
+
+.about-page__md-sign strong {
+  color: var(--magenta-deep);
+  font-size: 0.95rem;
+}
+
+.about-page__md-sign span {
+  color: var(--magenta);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-page__md-photo {
+  margin: 0;
+  width: 290px;
+  height: 290px;
+  max-width: min(290px, 42vw);
+  max-height: min(290px, 42vw);
+  background: #ffe4ef;
+  border-radius: 20px;
+  overflow: hidden;
+  justify-self: end;
+}
+
+.about-page__md-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  background: #ffe4ef;
+}
+
+.about-page__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  padding: 0.5rem 0 2rem;
+}
+
+.about-page__columns p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+.about-page__columns strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.about-page__foodix {
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+}
+
+.about-page__foodix-card {
+  background: linear-gradient(120deg, #9c1858 0%, #8a144c 45%, #6e0f3d 100%);
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.5rem, 5vw, 3.5rem);
+  box-shadow: 0 14px 36px rgba(110, 15, 61, 0.28);
+  border-radius: 20px;
+}
+
+.about-page__foodix-card p {
+  margin: 0 auto;
+  max-width: none;
+  color: #fff;
+  font-size: clamp(0.92rem, 1.45vw, 1.05rem);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.7;
+  text-align: center;
+  hyphens: none;
+}
+
+.about-page__plant {
+  background: #f5f5f5;
+  padding: clamp(2.5rem, 5vw, 3.75rem) 0;
+  margin: 1rem 0 0;
+}
+
+.about-page__plant-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.about-page__plant-inner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-page__plant-inner figure {
+  margin: 0;
+}
+
+.about-page__plant-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  max-width: 360px;
+  margin-left: auto;
+}
+
+.about-page__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.about-page__bottom p,
+.about-page__bottom li {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-page__bottom ul {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.about-page__bottom li {
+  position: relative;
+  padding-left: 1.15rem;
+}
+
+.about-page__bottom li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  background: var(--magenta);
+}
+
+.about-page__expertise {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 860px) {
+  .about-page__welcome,
+  .about-page__columns,
+  .about-page__plant-inner,
+  .about-page__bottom,
+  .about-page__md-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page__md-photo {
+    width: min(290px, 100%);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-width: 290px;
+    max-height: none;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .about-page__plant-inner img {
+    margin: 0 auto;
+  }
+}
