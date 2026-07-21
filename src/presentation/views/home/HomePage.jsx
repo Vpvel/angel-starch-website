@@ -12,12 +12,12 @@ import ProductPostsCarousel from './ProductPostsCarousel'
 export default function HomePage() {
   const { slides, tagline, welcome, products, buyers, productPosts } =
     useHomeViewModel()
-  const { openEnquiry } = useEnquiry()
+  const { openEnquiry, tryOpenEnquiryOnce } = useEnquiry()
 
   useEffect(() => {
-    const timer = setTimeout(() => openEnquiry(), 1400)
+    const timer = setTimeout(() => tryOpenEnquiryOnce(), 1400)
     return () => clearTimeout(timer)
-  }, [openEnquiry])
+  }, [tryOpenEnquiryOnce])
 
   return (
     <>
