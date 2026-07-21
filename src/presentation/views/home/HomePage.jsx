@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useHomeViewModel } from '../../viewmodels/useHomeViewModel'
+import { useEnquiry } from '../shared/EnquiryContext'
 import ScrollReveal from '../shared/ScrollReveal'
 import BannerSlider from './BannerSlider'
 import Tagline from './Tagline'
@@ -7,17 +8,16 @@ import WelcomeSection from './WelcomeSection'
 import ProductsSection from './ProductsSection'
 import OurBuyersSection from './OurBuyersSection'
 import ProductPostsCarousel from './ProductPostsCarousel'
-import EnquiryDialog from './EnquiryDialog'
 
 export default function HomePage() {
   const { slides, tagline, welcome, products, buyers, productPosts } =
     useHomeViewModel()
-  const [enquiryOpen, setEnquiryOpen] = useState(false)
+  const { openEnquiry } = useEnquiry()
 
   useEffect(() => {
-    const timer = setTimeout(() => setEnquiryOpen(true), 1400)
+    const timer = setTimeout(() => openEnquiry(), 1400)
     return () => clearTimeout(timer)
-  }, [])
+  }, [openEnquiry])
 
   return (
     <>
@@ -35,13 +35,8 @@ export default function HomePage() {
         <OurBuyersSection buyers={buyers} />
       </ScrollReveal>
       <ScrollReveal delay={0.08} y={40}>
-        <ProductPostsCarousel
-          productPosts={productPosts}
-          onEnquire={() => setEnquiryOpen(true)}
-        />
+        <ProductPostsCarousel productPosts={productPosts} onEnquire={openEnquiry} />
       </ScrollReveal>
-
-      <EnquiryDialog open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
     </>
   )
 }

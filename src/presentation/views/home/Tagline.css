@@ -6,13 +6,29 @@
 }
 
 .tagline__highlight {
-  display: inline-block;
-  max-width: 22ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  margin: 0 auto;
+  max-width: none;
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.65rem, 4.2vw, 2.55rem);
   font-weight: 700;
   font-style: italic;
-  line-height: 1.3;
+  line-height: 1.35;
   letter-spacing: -0.01em;
   color: #8f2a5c;
+  text-align: center;
+}
+
+.tagline__line {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .tagline__line {
+    white-space: normal;
+  }
 }

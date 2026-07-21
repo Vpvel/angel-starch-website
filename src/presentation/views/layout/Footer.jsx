@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLayoutViewModel } from '../../viewmodels/useLayoutViewModel'
+import { useEnquiry } from '../shared/EnquiryContext'
 import './Footer.css'
 
 const exploreLinks = [
@@ -14,6 +15,7 @@ const companyLinks = [
   { path: '/certifications', label: 'Certifications' },
   { path: '/careers', label: 'Careers' },
   { path: '/contact', label: 'Contact Us' },
+  { action: 'enquiry', label: 'Enquiry' },
 ]
 
 function SocialIcon({ id }) {
@@ -70,6 +72,7 @@ function SocialIcon({ id }) {
 
 export default function Footer() {
   const { company } = useLayoutViewModel()
+  const { openEnquiry } = useEnquiry()
 
   return (
     <footer className="footer" id="contact">
@@ -95,8 +98,18 @@ export default function Footer() {
           <h3 className="footer__title">Company</h3>
           <ul className="footer__list">
             {companyLinks.map((link) => (
-              <li key={link.path}>
-                <Link to={link.path}>{link.label}</Link>
+              <li key={link.path || link.action}>
+                {link.action === 'enquiry' ? (
+                  <button
+                    type="button"
+                    className="footer__link-btn"
+                    onClick={openEnquiry}
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link to={link.path}>{link.label}</Link>
+                )}
               </li>
             ))}
           </ul>

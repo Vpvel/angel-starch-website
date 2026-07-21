@@ -3,8 +3,12 @@ import Header from './Header'
 import Footer from './Footer'
 import WhatsApp from './WhatsApp'
 import BackToTop from './BackToTop'
+import EnquiryDialog from '../home/EnquiryDialog'
+import { EnquiryProvider, useEnquiry } from '../shared/EnquiryContext'
 
-export default function MainLayout() {
+function LayoutShell() {
+  const { enquiryOpen, closeEnquiry } = useEnquiry()
+
   return (
     <>
       <Header />
@@ -14,6 +18,15 @@ export default function MainLayout() {
       <Footer />
       <WhatsApp />
       <BackToTop />
+      <EnquiryDialog open={enquiryOpen} onClose={closeEnquiry} />
     </>
+  )
+}
+
+export default function MainLayout() {
+  return (
+    <EnquiryProvider>
+      <LayoutShell />
+    </EnquiryProvider>
   )
 }

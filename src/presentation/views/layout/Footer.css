@@ -61,6 +61,22 @@
   color: var(--accent-line);
 }
 
+.footer__link-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.88);
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.footer__link-btn:hover {
+  color: var(--accent-line);
+}
+
 .footer__detail {
   display: grid;
   grid-template-columns: auto 1fr;
