@@ -5,6 +5,10 @@ export const careersRepository = {
     return {
       title: 'Careers',
       subtitle: 'Grow with Angel Starch',
+      banner: {
+        src: '/careers/careers-banner.png',
+        alt: 'Professional looking toward future career pathways',
+      },
       intro: `Join ${COMPANY.name} and contribute to innovative starch and food ingredient solutions for customers worldwide.`,
       posts: [
         {

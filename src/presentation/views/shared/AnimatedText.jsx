@@ -28,7 +28,7 @@ export default function AnimatedText({
         )
 
   return (
-    <Tag className={`animated-text ${className}`.trim()}>
+    <Tag className={`animated-text ${className}`.trim()} data-reveal="text">
       {parts.map((part, index) => (
         <motion.span
           key={`${part}-${index}`}
@@ -36,7 +36,8 @@ export default function AnimatedText({
           custom={index}
           variants={wordVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.6 }}
         >
           {part === ' ' ? '\u00A0' : part}
         </motion.span>

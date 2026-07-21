@@ -248,8 +248,16 @@
   color: #fff;
 }
 
+.application-page__product.is-magenta p {
+  color: #fff;
+}
+
 .application-page__product.is-light {
   background: #eceff3;
+  color: var(--ink);
+}
+
+.application-page__product.is-light p {
   color: var(--ink);
 }
 

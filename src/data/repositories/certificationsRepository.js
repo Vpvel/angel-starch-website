@@ -21,6 +21,10 @@ export const certificationsRepository = {
     return {
       title: 'Certifications',
       subtitle: 'Quality and compliance credentials',
+      banner: {
+        src: '/certifications/certifications-banner.png',
+        alt: 'Certification checkmark symbol representing quality and compliance',
+      },
       items: certificates.map((file) => ({
         name: file.replace(/-1024x1024\.png$/i, '').replace(/-/g, ' '),
         src: `/asset/certificates/${file}`,

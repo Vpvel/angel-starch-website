@@ -1,11 +1,11 @@
 .buyers {
-  background: #f2f2f2;
-  padding: clamp(2.75rem, 6vw, 4rem) 0;
+  background: linear-gradient(180deg, #f7f5f6 0%, #f0eef0 100%);
+  padding: clamp(3rem, 6.5vw, 4.5rem) 0;
   border-top: 1px solid var(--line);
 }
 
 .buyers__heading {
-  margin: 0 0 clamp(1.75rem, 4vw, 2.5rem);
+  margin: 0 0 clamp(1.85rem, 4vw, 2.75rem);
   text-align: center;
   font-size: clamp(1.35rem, 2.4vw, 1.75rem);
   font-weight: 700;
@@ -27,12 +27,13 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.75rem;
 }
 
 .buyers__viewport {
   overflow: hidden;
   width: 100%;
+  padding: 0.35rem 0;
 }
 
 .buyers__track {
@@ -45,39 +46,73 @@
 }
 
 .buyers__item {
-  flex: 0 0 110px;
-  width: 110px;
+  flex: 0 0 188px;
+  width: 188px;
   display: grid;
   place-items: center;
-  padding: 0;
+  padding: 0 0.55rem;
   margin: 0;
 }
 
-.buyers__item img {
+.buyers__logo {
+  width: 168px;
+  height: 128px;
+  display: grid;
+  place-items: center;
+  padding: 1rem 1.15rem;
+  background: var(--white);
+  border: 1px solid rgba(31, 31, 31, 0.08);
+}
+
+.buyers__logo img {
   width: 100%;
-  height: 70px;
+  height: 96px;
   object-fit: contain;
   display: block;
+  filter: grayscale(0.15);
+  opacity: 0.92;
+  transition: filter 0.25s, opacity 0.25s, transform 0.25s;
+}
+
+.buyers__item:hover .buyers__logo img {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.04);
 }
 
 .buyers__arrow {
-  width: 24px;
-  height: 36px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: grid;
   place-items: center;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   line-height: 1;
-  color: #7eb6d6;
-  background: transparent;
-  transition: color 0.2s;
+  color: var(--magenta);
+  background: var(--white);
+  border: 1px solid rgba(168, 36, 104, 0.18);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .buyers__arrow:hover {
-  color: var(--magenta);
+  color: var(--white);
+  background: var(--magenta);
+  border-color: var(--magenta);
 }
 
-@media (max-width: 560px) {
-  .buyers__item img {
-    height: 56px;
+@media (max-width: 640px) {
+  .buyers__logo {
+    width: 156px;
+    height: 112px;
+    padding: 0.75rem;
+  }
+
+  .buyers__logo img {
+    height: 82px;
+  }
+
+  .buyers__arrow {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 1.45rem;
   }
 }

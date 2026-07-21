@@ -7,6 +7,7 @@ import {
   CategoryDetailPage,
   SubcategoryPage,
 } from './presentation/views/categories/CategoryDetailPage'
+import AccoladesPage from './presentation/views/accolades/AccoladesPage'
 import BlogsPage from './presentation/views/blogs/BlogsPage'
 import NewsPage from './presentation/views/news/NewsPage'
 import CertificationsPage from './presentation/views/certifications/CertificationsPage'
@@ -26,6 +27,7 @@ export default function App() {
             path="categories/:categorySlug/:subSlug"
             element={<SubcategoryPage />}
           />
+          <Route path="accolades" element={<AccoladesPage />} />
           <Route path="blogs" element={<BlogsPage />} />
           <Route path="news" element={<NewsPage />} />
           <Route path="certifications" element={<CertificationsPage />} />

@@ -7,7 +7,12 @@ export default function CertificationsPage() {
 
   return (
     <>
-      <PageHero title={page.title} subtitle={page.subtitle} />
+      <PageHero
+        title={page.title}
+        subtitle={page.subtitle}
+        image={page.banner.src}
+        imageAlt={page.banner.alt}
+      />
       <section className="certs section">
         <div className="container">
           <ul className="certs__grid">

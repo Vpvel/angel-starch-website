@@ -2,13 +2,13 @@ import { COMPANY } from '../../domain/models/company.js'
 
 const HOME_IMAGES = {
   starchBowl: '/homepage/static-1.jpg',
-  maizeStarch: '/homepage/static-2.jpg',
+  maizeStarch: '/homepage/static-2.png',
 }
 
 const BANNER_IMAGES = {
-  experience: '/banner/istockphoto-2157667752-612x612.jpg',
-  market: '/banner/istockphoto-508459346-612x612.jpg',
-  satisfaction: '/banner/istockphoto-641000608-612x612.jpg',
+  experience: '/banner/banner_1.png',
+  market: '/banner/banner_2.png',
+  satisfaction: '/banner/banner_3.png',
 }
 
 const slides = [
@@ -76,6 +76,10 @@ const buyers = {
 const productPosts = {
   heading: 'Product Posts',
   subtitle: 'Explore our featured starch and ingredient highlights',
+  certificationsBanner: {
+    src: '/homepage/cerification_images.png',
+    alt: 'Angel Starch quality certifications including ISO, Halal, Kosher, USDA Organic, FSSAI and more',
+  },
   items: [
     {
       id: 'post-1',

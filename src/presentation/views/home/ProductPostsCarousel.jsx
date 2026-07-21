@@ -132,6 +132,16 @@ export default function ProductPostsCarousel({ productPosts, onEnquire }) {
             />
           ))}
         </div>
+
+        {productPosts.certificationsBanner ? (
+          <figure className="product-posts__certs">
+            <img
+              src={productPosts.certificationsBanner.src}
+              alt={productPosts.certificationsBanner.alt}
+              loading="lazy"
+            />
+          </figure>
+        ) : null}
       </div>
 
       {zoomItem ? (

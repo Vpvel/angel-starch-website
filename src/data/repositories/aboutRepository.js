@@ -1,4 +1,5 @@
 const ABOUT_IMAGES = {
+  banner: '/about/about-banner.png',
   welcome: '/about/abt_01.png.webp',
   plantBased: '/about/abt_02-300x300.webp',
   md: '/about/md-vps-radhakrishnan.png',

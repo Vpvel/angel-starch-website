@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import './OurBuyersSection.css'
 
-const ITEM_WIDTH = 110
+const ITEM_WIDTH = 188
 
 export default function OurBuyersSection({ buyers }) {
   const logos = buyers.logos
@@ -49,7 +49,9 @@ export default function OurBuyersSection({ buyers }) {
             >
               {track.map((logo, i) => (
                 <li key={`${logo.src}-${i}`} className="buyers__item">
-                  <img src={logo.src} alt={logo.name} loading="lazy" />
+                  <div className="buyers__logo">
+                    <img src={logo.src} alt={logo.name} loading="lazy" />
+                  </div>
                 </li>
               ))}
             </ul>

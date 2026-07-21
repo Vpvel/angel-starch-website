@@ -35,7 +35,11 @@ export default function AboutPage() {
 
   return (
     <>
-      <PageHero title={page.title} subtitle={page.subtitle} />
+      <PageHero
+        title={page.title}
+        image={page.images.banner}
+        imageAlt="Wooden bowl of starch powder with corn on a rustic table"
+      />
 
       <section className="about-page">
         <div className="about-page__welcome container">

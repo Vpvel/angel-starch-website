@@ -4,6 +4,7 @@ import Footer from './Footer'
 import WhatsApp from './WhatsApp'
 import BackToTop from './BackToTop'
 import EnquiryDialog from '../home/EnquiryDialog'
+import ScrollTextAnimator from '../shared/ScrollTextAnimator'
 import { EnquiryProvider, useEnquiry } from '../shared/EnquiryContext'
 
 function LayoutShell() {
@@ -16,6 +17,7 @@ function LayoutShell() {
         <Outlet />
       </main>
       <Footer />
+      <ScrollTextAnimator />
       <WhatsApp />
       <BackToTop />
       <EnquiryDialog open={enquiryOpen} onClose={closeEnquiry} />
